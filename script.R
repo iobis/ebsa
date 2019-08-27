@@ -15,11 +15,12 @@ xlim <- c(-45, 51)
 ylim <- c(20, 90)
 datafile_name <- "taxonomy_grouped_20190827"
 shapefile_name <- "ne_atlantic.shp"
+res <- 9
 
 # construct discrete global grid system
 # see https://github.com/r-barnes/dggridR for grid resolutions
 
-dggs <- dgconstruct(projection = "ISEA", topology = "HEXAGON", res = 9)
+dggs <- dgconstruct(projection = "ISEA", topology = "HEXAGON", res = res)
 
 # download from OBIS, read occurrence data, and filter
 
