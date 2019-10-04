@@ -16,7 +16,8 @@ subsets <- list(
   mammals = df %>% filter(classid == 1837),
   turtles = df %>% filter(orderid == 2689),
   shallow = df %>% filter(minimumdepthinmeters <= 100 | maximumdepthinmeters <= 100),
-  deep = df %>% filter(minimumdepthinmeters > 100 | maximumdepthinmeters > 100)
+  deep = df %>% filter(minimumdepthinmeters > 100 | maximumdepthinmeters > 100),
+  fish = df %>% filter(superclassid == 11676)
 )
 
 for (name in names(subsets)) {

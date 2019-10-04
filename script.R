@@ -28,7 +28,7 @@ dir.create("temp")
 url <- paste0("https://download.obis.org/export/", datafile_name, ".zip")
 zip_path <- paste0("temp/", datafile_name, ".zip")
 csv_path <- paste0("temp/", datafile_name, ".csv")
-if (!file.exists(path)) {
+if (!file.exists(zip_path)) {
   download.file(url, zip_path)
   unzip(zipfile = zip_path, exdir = "temp")
 }
