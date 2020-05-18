@@ -13,7 +13,7 @@ source("lib.R")
 
 xlim <- c(-45, 51)
 ylim <- c(20, 90)
-datafile_name <- "taxonomy_grouped_20190827"
+datafile_name <- "taxonomy_grouped_20200518"
 shapefile_name <- "ne_atlantic.shp"
 res <- 9
 
@@ -25,7 +25,7 @@ dggs <- dgconstruct(projection = "ISEA", topology = "HEXAGON", res = res)
 # download from OBIS, read occurrence data, and filter
 
 dir.create("temp")
-url <- paste0("https://download.obis.org/export/", datafile_name, ".zip")
+url <- paste0("https://ams3.digitaloceanspaces.com/obis-datasets/exports/", datafile_name, ".zip")
 zip_path <- paste0("temp/", datafile_name, ".zip")
 csv_path <- paste0("temp/", datafile_name, ".csv")
 if (!file.exists(zip_path)) {
